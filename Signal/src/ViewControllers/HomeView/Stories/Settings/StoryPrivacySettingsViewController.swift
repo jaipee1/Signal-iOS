@@ -113,9 +113,9 @@ class StoryPrivacySettingsViewController: OWSTableViewController2 {
                     cell.configure(conversationItem: item, transaction: transaction)
                 }
                 return cell
-            }) { [weak self] in
+            }, actionBlock:  { [weak self] in
                 self?.showSettings(for: item)
-            })
+            }))
         }
 
         let viewReceiptsSection = OWSTableSection()
